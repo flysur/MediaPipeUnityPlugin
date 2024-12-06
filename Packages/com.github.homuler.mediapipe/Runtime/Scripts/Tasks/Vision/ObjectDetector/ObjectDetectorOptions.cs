@@ -105,6 +105,7 @@ namespace Mediapipe.Tasks.Vision.ObjectDetector
       this.resultCallback = resultCallback;
     }
 
+    /*
     internal Proto.ObjectDetectorOptions ToProto()
     {
       var baseOptionsProto = baseOptions.ToProto();
@@ -138,11 +139,12 @@ namespace Mediapipe.Tasks.Vision.ObjectDetector
 
       return options;
     }
+    */
 
     CalculatorOptions Tasks.Core.ITaskOptions.ToCalculatorOptions()
     {
       var options = new CalculatorOptions();
-      options.SetExtension(Proto.ObjectDetectorOptions.Extensions.Ext, ToProto());
+      //options.SetExtension(Proto.ObjectDetectorOptions.Extensions.Ext, ToProto());
       return options;
     }
   }

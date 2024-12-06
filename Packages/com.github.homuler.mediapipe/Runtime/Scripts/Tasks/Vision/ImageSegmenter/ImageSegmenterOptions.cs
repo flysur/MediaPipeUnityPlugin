@@ -82,7 +82,7 @@ namespace Mediapipe.Tasks.Vision.ImageSegmenter
       this.outputCategoryMask = outputCategoryMask;
       this.resultCallback = resultCallback;
     }
-
+    /*
     internal Proto.ImageSegmenterGraphOptions ToProto()
     {
       var baseOptionsProto = baseOptions.ToProto();
@@ -100,12 +100,16 @@ namespace Mediapipe.Tasks.Vision.ImageSegmenter
 
       return options;
     }
-
+    */
+    
     CalculatorOptions Tasks.Core.ITaskOptions.ToCalculatorOptions()
     {
+      
       var options = new CalculatorOptions();
-      options.SetExtension(Proto.ImageSegmenterGraphOptions.Extensions.Ext, ToProto());
+      //options.SetExtension(Proto.ImageSegmenterGraphOptions.Extensions.Ext, ToProto());
       return options;
+      
     }
+    
   }
 }

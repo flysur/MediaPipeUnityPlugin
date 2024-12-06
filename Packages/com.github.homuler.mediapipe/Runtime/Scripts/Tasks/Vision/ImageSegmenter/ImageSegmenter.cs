@@ -312,7 +312,7 @@ namespace Mediapipe.Tasks.Vision.ImageSegmenter
     {
       var graphConfig = GetGraphConfig();
       var labels = new List<string>();
-
+      /*
       foreach (var node in graphConfig.Node)
       {
         if (node.Name.EndsWith(_TENSORS_TO_SEGMENTATION_CALCULATOR_NAME))
@@ -328,7 +328,7 @@ namespace Mediapipe.Tasks.Vision.ImageSegmenter
           }
         }
       }
-
+      */
       return labels;
     }
   }
